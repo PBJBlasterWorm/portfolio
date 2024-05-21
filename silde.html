@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #divBox {
+        width: 100px;
+        height: 100px;
+        background: green;
+        border: 5px solid red;
+    }
+</style>
+<body>
+    <h1>슬라이드 토글</h1>
+    <button id="slideToggleBtn">슬라이드 토글</button>
+    <div id="divBox"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        $("#slideToggleBtn").hover(function() {
+            $("#divBox").slideToggle("fast"); // 2초에 걸쳐서 진행
+        });
+    });
+</script>
+</html>

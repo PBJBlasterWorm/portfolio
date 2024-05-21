@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    width: 1900px;
+    height: 6000px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 30px;
+    text-align: center;
+}
+
+#licolor1:hover {
+    background-color: #01DFD7;
+    color: #fff
+}
+
+#licolor2:hover {
+    background-color: #FE2E2E;
+    color: #fff
+}
+
+#licolor3:hover {
+    background-color: #2E2EFE;
+    color: #fff
+}
+
+#licolor4:hover {
+    background-color: #8904B1;
+    color: #fff
+}
+
+#licolor5:hover {
+    background-color: #74DF00;
+    color: #050404
+}
+
+#licolor1, #licolor2, #licolor3, #licolor4, #licolor5 {
+    padding: 0 5px;
+}
+
+.sidemenu2 {
+    display: none;
+    position: fixed;
+    color: #000;
+    background-color: #fff;
+    padding: 10px 5px 10px 5px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    top: 250px;
+    left: 0;
+}
+
+.slidebtn2 {
+    width: 162.25px;
+    padding: 10px 5px 10px 5px;
+}
+
+#slideon2 {
+    display: none;
+}
+
+.first {
+    opacity: 1;
+    display: flex;
+    width: 1900px;
+}
+
+.initscreen {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 1900px;
+    height: 100%;
+    background-color: #000;
+    animation: screenslide 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes screenslide {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.project {
+    display: none;
+    position: relative;
+    width: 1900px;
+    height: 100%;
+    left: 0;
+    justify-content: center;
+}
+
+.project1 {
+    display: flex;
+    position: absolute;
+    font-size: 150px;
+    font-weight: 1000;
+    top: 300px;
+}
+
+.project2 {
+    background-color: #fff;
+    position: absolute;
+    top: 700px; 
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #fff;
+}
+
+.imginner1 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.imgbox1 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.textbox1 {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 400px;
+    height: 400px;
+}
+
+.projecttext1 {
+    display: flex;
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.projecttext2 {
+    color: #000;
+    font-weight: bold;
+    margin: 30px 20px;
+}
+
+.imgindex1 {
+    position: absolute;
+    color: #000;    
+    top: 420px;
+    left: 200px;
+    font-weight: bold;
+}
+
+.projecttext3 {
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.tetrislink {
+    position: absolute;
+    font-size: 30px;
+    bottom: 0;
+    right: 0;
+}
+
+.project3 {
+    background-color: #fff;
+    position: absolute;
+    top: 1700px; 
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #fff;
+}
+
+.imginner2 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.imgbox2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.textbox2 {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 400px;
+    height: 400px;
+}
+
+.projecttext4 {
+    display: flex;
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.projecttext5 {
+    color: #000;
+    font-weight: bold;
+    margin: 30px 20px;
+}
+
+.imgindex2 {
+    position: absolute;
+    color: #000;    
+    top: 420px;
+    left: 200px;
+    font-weight: bold;
+}
+
+.projecttext6 {
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.TeamRPAlink {
+    position: absolute;
+    font-size: 30px;
+    bottom: 0;
+    right: 0;
+}
+
+.project4 {
+    background-color: #fff;
+    position: absolute;
+    top: 2700px; 
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #fff;
+}
+
+.imginner3 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.imgbox3 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.textbox3 {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 400px;
+    height: 400px;
+}
+
+.projecttext7 {
+    display: flex;
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.projecttext8 {
+    color: #000;
+    font-weight: bold;
+    margin: 30px 20px;
+}
+
+.imgindex3 {
+    position: absolute;
+    color: #000;    
+    top: 420px;
+    left: 200px;
+    font-weight: bold;
+}
+
+.projecttext9 {
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.SingleRPAlink {
+    position: absolute;
+    font-size: 30px;
+    bottom: 0;
+    right: 0;
+}
+
+.project5 {
+    background-color: #fff;
+    position: absolute;
+    top: 3700px; 
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #fff;
+}
+
+.imginner4 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.imgbox4 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.textbox4 {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 400px;
+    height: 400px;
+}
+
+.projecttext10 {
+    display: flex;
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.projecttext11 {
+    color: #000;
+    font-weight: bold;
+    margin: 30px 20px;
+}
+
+.imgindex4 {
+    position: absolute;
+    color: #000;    
+    top: 420px;
+    left: 200px;
+    font-weight: bold;
+}
+
+.projecttext12 {
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.pythonlink {
+    position: absolute;
+    font-size: 30px;
+    bottom: 0;
+    right: 0;
+}
+
+.project6 {
+    background-color: #fff;
+    position: absolute;
+    top: 4700px; 
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #fff;
+}
+
+.imginner5 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.imgbox5 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.textbox5 {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 400px;
+    height: 400px;
+}
+
+.projecttext13 {
+    display: flex;
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.projecttext14 {
+    color: #000;
+    font-weight: bold;
+    margin: 30px 20px;
+}
+
+.imgindex5 {
+    position: absolute;
+    color: #000;    
+    top: 420px;
+    left: 200px;
+    font-weight: bold;
+}
+
+.projecttext15 {
+    color: #000;
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.raspberrypilink {
+    position: absolute;
+    font-size: 30px;
+    bottom: 0;
+    right: 0;
+}
+
+.prevhtml {
+    position: absolute;
+    color: #fff;
+    font-size: 100px;
+    bottom: -5200px;
+    font-weight: 1000;
+    cursor: pointer;
+}
+
+@keyframes fadeintext {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeouttext {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+    }
+}
+
+.prevmove {
+    position: absolute;
+    transform: translateX(1100px);
+    transition: 2s;
+    animation: fadeintext 2s forwards;
+}
+
+.prevRmove {
+    position: absolute;
+    transition: 2s;
+    animation: fadeouttext 2s forwards;
+}

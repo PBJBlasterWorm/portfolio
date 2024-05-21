@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Gradient Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;   
+  }
+   
+  ul {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 2100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+  }
+   
+  li {
+    list-style: none;
+    width: 300px;
+    height: 300px;
+    float: left;
+  }
+   
+  .red {
+    background-color: red;
+  }
+  .orange {
+    background-color: orange;
+  }
+   
+  .yellow {
+    background-color: yellow;
+  }
+  .green {
+    background-color: green;
+  }
+  .blue {
+    background-color: blue;
+  }
+  .navy {
+    background-color: navy;
+  }
+  .purple {
+    background-color: purple;
+  }
+</style>
+<body>
+    <div class=box>
+        <ul>
+          <li class="red"></li>
+          <li class="orange"></li>
+          <li class="yellow"></li>
+          <li class="green"></li>
+          <li class="blue"></li>
+          <li class="navy"></li>
+          <li class="purple"></li>
+        </ul>
+      </div>
+</body>
+<script>
+    const ul = document.querySelector('ul');
+    let li;
+    let left = 0;
+    setInterval(() => {
+      li = document.querySelectorAll('li');
+      left = -300;
+      ul.style.left = `${left}px`;
+      ul.style.transition = '1s';
+    }, 1000)
+     
+    ul.addEventListener("transitionend", function() {
+      console.log('transitionend');
+      ul.style.left = `0px`
+      ul.style.transition = '0s';
+      ul.appendChild(li[0]);
+    })
+</script>
+</html>

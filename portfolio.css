@@ -1,0 +1,644 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    width: 1900px;
+    height: 5500px;
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 30px;
+    text-align: center;
+}
+
+#licolor1:hover {
+    background-color: #01DFD7;
+    color: #fff
+}
+
+#licolor2:hover {
+    background-color: #FE2E2E;
+    color: #fff
+}
+
+#licolor3:hover {
+    background-color: #2E2EFE;
+    color: #fff
+}
+
+#licolor4:hover {
+    background-color: #8904B1;
+    color: #fff
+}
+
+#licolor5:hover {
+    background-color: #74DF00;
+    color: #050404
+}
+
+#licolor1, #licolor2, #licolor3, #licolor4, #licolor5 {
+    padding: 0 5px;
+}
+
+.sidemenu1 {
+    display: none;
+    position: fixed;
+    color: #000;
+    background-color: #fff;
+    padding: 10px 5px 10px 5px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    top: 250px;
+    left: 0;
+    z-index: 999;
+}
+
+.slidebtn1 {
+    width: 162.25px;
+    padding: 10px 5px 10px 5px;
+}
+
+#slideon1 {
+    display: none;
+}
+
+@keyframes screenslide {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.initscreen {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 1900px;
+    height: 100%;
+    background-color: #000;
+    animation: screenslide 2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.coverscreen {
+    display: none;;
+}
+
+.first {
+    opacity: 1;
+    position: relative;
+    background-image: url(space.png);
+    background-repeat: no-repeat round;    
+    color: #ffffff;
+    background-size: 2000px;
+    padding: 300px 0 200px 0;
+    width: 100%;
+    height: 200px;
+}
+
+@keyframes fadeintext {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeouttext {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+    }
+}
+
+.myname1 {
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    font-size: 30px;
+}
+
+.move1 {
+    transform: translateX(700px);
+    transition: 1.5s;
+    animation: fadeintext 2s forwards;
+}
+
+.reversemove1 {
+    position: absolute;
+    left: 700px;
+    transform: translateX(-700px);
+    transition: 1.5s;
+    animation: fadeouttext 2s forwards;
+}
+
+.myname2 {
+    padding: 0 0 200px 0;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 30px;
+}
+
+.move2 {
+    transform: translateX(-700px);
+    transition: 1.5s;
+    font-size: 30px;
+    animation: fadeintext 3s forwards;
+}
+
+.reversemove2 {
+    position: absolute;
+    right: 700px;
+    transform: translateX(700px);
+    transition: 1.5s;
+    animation: fadeouttext 3s forwards;
+}
+
+.second {
+    margin: 400px 0 0 0;
+}
+
+.bgsea {
+    display: flex;
+}
+
+.sea1 {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    height: 900px;
+    top: 50%;
+    left: 0%;
+    transition: 1s ease;
+}
+
+@keyframes circleeffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+.sea1circle {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: #545454;
+    border-radius: 50%;
+    animation: circleeffect 2s;
+}
+
+.sea1text1 {
+    position: absolute;
+    font-size: 80px;
+    top: 90px;
+    left: -800px;
+}
+
+.sea1text2 {
+    position: absolute;
+    font-size: 80px;
+    top: 300px;
+    left: -800px;
+}
+
+.sea1text3 {
+    position: absolute;
+    font-size: 80px;
+    top: 510px;
+    left: -800px;
+}
+
+.move3 {
+    position: absolute;
+    transform: translateX(900px);
+    transition: 2s;
+    animation: fadeintext 2s forwards;
+}
+
+.reversemove3 {
+    position: absolute;
+    left: 0;
+    transform: translateX(-1000px);
+    transition: 2s;
+    animation: fadeouttext 2s forwards;
+}
+
+.sea2 {
+    display: flex;
+    position: relative;
+    top: 50%;
+    right: 0%;
+    width: 50%;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.sea2text1 {
+    position: absolute;
+    font-size: 80px;
+    top: 90px;
+    right: -500px;
+}
+
+.sea2text2 {
+    position: absolute;
+    font-size: 80px;
+    top: 300px;
+    right: -500px;
+}
+
+.sea2text3 {
+    position: absolute;
+    font-size: 80px;
+    top: 510px;
+    right: -500px;
+}
+
+.move4 {
+    position: absolute;
+    transform: translateX(-800px);
+    transition: 2s;
+    animation: fadeintext 2s forwards;
+}
+
+.reversemove4 {
+    position: absolute;
+    right: 0;
+    transform: translateX(800px);
+    transition: 2s;
+    animation: fadeouttext 2s forwards;
+}
+
+.third {
+    position: relative;
+    top: 100px;
+    background-color: #000;
+}
+
+.about {
+    display: flex;
+    background-color: #000;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about1 {
+    display: flex;
+    color: #fff;
+    position: absolute;
+    left: 1600px;
+    font-size: 150px;
+    margin: 0 0 600px 0;
+    font-weight: 1000;
+}
+
+.aboutscreen {
+    position: relative;
+    color: #000;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 15px 15px 5px #A4A4A4;
+    top: 100px;
+    width: 600px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.aboutscreen:hover {
+    transform: rotateY(180deg);
+}
+
+.backaboutscreen {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+    width: 600px;
+    height: 400px;
+    box-shadow: 10px 15px 15px 5px #A4A4A4;
+}
+
+.aboutscreen, .backaboutscreen {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    color: #000;
+}
+
+.about1move {
+    position: absolute;
+    transform: translateX(-1300px);
+    transition: 2s;
+    animation: fadeintext 2s forwards;
+}
+
+.about1Rmove {
+    position: absolute;
+    transition: 2s;
+    animation: fadeouttext 2s forwards;
+}
+
+.about2 {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    gap: 120px;
+}
+
+.about3 {
+    display: flex;
+    position: absolute;
+    top: 240px;
+    left: 40px;
+    gap: 60px;
+}
+
+.four {
+    position: relative;
+    top: 600px;
+    background-color: #000;
+}
+
+.skill {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 900px;
+}
+
+.skill1 {
+    position: absolute;
+    display: flex;
+    right: 1600px;
+    font-size: 150px;
+    font-weight: 1000;
+}
+
+.skill1move {
+    position: absolute;
+    transform: translateX(1300px);
+    transition: 2s;
+    animation: fadeintext 2s forwards;
+}
+
+.skill1Rmove {
+    position: absolute;
+    transition: 2s;
+    animation: fadeouttext 2s forwards;
+}
+
+.skill2 {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+#language, #web {
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 500px;
+    background-color: #ffffff;
+    margin: 300px 30px 0 30px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 10px 15px 15px 5px #A4A4A4;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    justify-content: center;
+    align-content: center;
+}
+
+#os {
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 500px;
+    background-color: #ffffff;
+    margin: 300px 30px 0 30px;
+    padding: 40px 0 0 20px;
+    border-radius: 20px;
+    box-shadow: 10px 15px 15px 5px #A4A4A4;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+#language:hover, #web:hover, #os:hover {
+    transform: rotateY(180deg);
+}
+
+.front-language, .back-language, .front-web, .back-web, .front-os, .back-os {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    color: blue;
+}
+
+.back-language, .back-web, .back-os {
+    padding: 150px 0 0 0;
+    text-align: center;
+    font-size: 40px;
+    transform: rotateY(180deg);
+}
+
+.five {
+    position: relative;
+    top: 800px;
+}
+
+.archive {
+    background-color: #000000;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 900px;
+}
+
+.archive1 {
+    color: #ffffff;
+    position: absolute;
+    display: flex;
+    left: 1600px;
+    font-size: 150px;
+    font-weight: 1000;
+}
+
+.archive1move {
+    position: absolute;
+    transform: translateX(-1300px);
+    transition: 2s;
+    animation: fadeintext 2s forwards;
+}
+
+.archive1Rmove {
+    position: absolute;
+    transition: 2s;
+    animation: fadeouttext 2s forwards;
+}
+
+.archive2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gitlink {
+    position: absolute;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 10px 15px 15px 5px #A4A4A4;
+    background-color: #ffffff;
+    top: 300px;
+    left: 400px;
+    width: 500px;
+    height: 400px;
+    justify-content: center;
+}
+
+.gitlink:hover {
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.gitimg {
+    width: 250px;
+    height: 80px;
+    margin: 30px 0;
+}
+
+.gittext {
+    position: absolute;
+    top: 130px;
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.gittext:hover {
+    text-decoration: underline;
+}
+
+.gitlist {
+    position: absolute;
+    font-size: 20px;
+    top: 250px;
+    margin: 10px 0;
+}
+
+.behance {
+    position: absolute;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 10px 15px 15px 5px #A4A4A4;
+    background-color: #ffffff;
+    top: 300px;
+    right: 400px;
+    width: 500px;
+    height: 400px;
+    justify-content: center;
+}
+
+.behance:hover {
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.behanimg {
+    width: 250px;
+    height: 80px;
+    margin: 30px 0;
+}
+
+.belist {
+    position: absolute;
+    font-size: 20px;
+    top: 250px;
+    margin: 10px 0;
+}
+
+.six {
+    position: relative;
+    top: 800px;
+    display: flex;
+    background-color: #000000;
+    height: 600px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.projectlink {
+    position: absolute;
+    top: 650px;
+    display: flex;
+    color: #ffffff;
+    font-weight: 1000;
+    text-align: right;
+    font-size: 100px;
+    cursor: pointer;
+}
+
+.projectlinkmove {
+    transform: translateX(-1100px);
+    transition: 2s;
+    animation: fadeintext 2s forwards;
+}
+
+.projectlinkRmove {
+    transition: 2s;
+    animation: fadeouttext 2s forwards;
+}

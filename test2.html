@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Over Background Image</title>
+<style>
+  .container {
+    position: relative; /* 자식 요소를 상대 위치로 배치하기 위해 부모 요소를 상대 위치로 설정 */
+    width: 800px; /* 예시로 너비 설정 */
+    height: 400px; /* 예시로 높이 설정 */
+    background-image: url('space.png');
+    background-size: cover;
+    background-position: center;
+    color: white; /* 텍스트 색상 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-size: 24px; /* 글꼴 크기 설정 */
+    padding-top: 50px; /* 위쪽 여백 설정 */
+  }
+
+  .text-overlay {
+    position: absolute; /* 상대 위치로 배치 */
+    top: 50%; /* 부모 요소의 중앙으로부터 상단으로 50% 위치 */
+    left: 50%; /* 부모 요소의 중앙으로부터 좌측으로 50% 위치 */
+    transform: translate(-50%, -50%); /* 요소를 자체의 중앙으로 정렬 */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-overlay">
+    <h1>Hello, World!</h1>
+    <p>This is some text over the background image.</p>
+  </div>
+</div>
+
+</body>
+</html>

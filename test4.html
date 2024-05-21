@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            transition: background-color 1s, opacity 1s;
+        }
+
+        .fade-out {
+            background-color: black; /* 변경하고 싶은 색상 */
+            opacity: 0;
+        }
+
+        .fade-in {
+            background-color: white; /* 원래 배경색 */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <h1>현재 페이지</h1>
+    <button onclick="navigate()">다음 페이지로 이동</button>
+
+    <script>
+        function navigate() {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'test3.html';
+            }, 1000); // 애니메이션 시간과 동일하게 설정
+        }
+    </script>
+</body>
+</html>
